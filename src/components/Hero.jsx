@@ -1,9 +1,9 @@
-import profilePic from './assets/img.webp'; // Correct import statement
-import { HERO_CONTENT } from "../constants";
-import { motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+  import profilePic from "../assets/img.webp";
+  import { HERO_CONTENT } from "../constants";
+  import { motion } from "framer-motion";
+  import React, { useEffect, useState } from "react";
 
-// List of different font families
+
 const fonts = [
   "Arial",
   "Georgia",
@@ -12,6 +12,7 @@ const fonts = [
   "Times New Roman",
   "Comic Sans MS",
   "Trebuchet MS",
+  
 ];
 
 const containerVariants = {
@@ -46,7 +47,7 @@ const Hero = () => {
   const [currentTitleFontIndex, setCurrentTitleFontIndex] = useState(0);
 
   useEffect(() => {
-    // Change the font every 400 milliseconds for both name and title
+    // Change the font every 200 milliseconds for both name and title
     const interval = setInterval(() => {
       setCurrentFontIndex((prevIndex) => (prevIndex + 1) % fonts.length);
       setCurrentTitleFontIndex((prevIndex) => (prevIndex + 1) % fonts.length);
@@ -62,7 +63,7 @@ const Hero = () => {
         <div className="w-full lg:w-1/2">
           <div className="flex justify-center lg:p-8">
             <motion.img
-              src={profilePic} // Use the imported image here
+              src={profilePic}
               alt="Amardeep"
               className="border border-stone-900 rounded-3xl"
               width={400}
