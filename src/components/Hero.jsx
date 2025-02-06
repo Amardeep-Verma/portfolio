@@ -95,7 +95,7 @@ const Hero = () => {
               className="pb-2 text-4xl tracking-tighter lg:text-8xl"
               style={{ fontFamily: fonts[currentFontIndex] }} // Apply the current font for the name
             >
-              Amardeep
+              Amar
             </motion.h2>
 
             {/* Animated title with changing font effect */}
